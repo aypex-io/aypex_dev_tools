@@ -1,7 +1,3 @@
-# Defined in aypex_dev_tools
-require "aypex/testing_support/auth_helpers"
-require "aypex/testing_support/checkout_helpers"
-
 # Requires factories and other useful helpers defined in aypex_core.
 require "aypex/testing_support/authorization_helpers"
 require "aypex/testing_support/caching"
@@ -33,8 +29,6 @@ RSpec.configure do |config|
   # == Requests support
   #
   # Adds convenient methods to request Aypex's controllers
-  config.include Aypex::TestingSupport::AuthHelpers, type: :feature
-  config.include Aypex::TestingSupport::CheckoutHelpers, type: :feature
   config.include Aypex::TestingSupport::ControllerRequests, type: :controller
   config.include Aypex::TestingSupport::LocaleHelpers
 
