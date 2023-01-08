@@ -17,6 +17,10 @@ RSpec.configure do |config|
 
   config.before do
     DatabaseCleaner.start
+    Rails.cache.clear
+
+    create(:country, name: "United States of America", iso_name: "UNITED STATES", iso: "US", states_required: true)
+    create(:store, default: true)
   end
 
   # After each spec clean the database.
