@@ -4,6 +4,7 @@ require "aypex/testing_support/caching"
 require "aypex/testing_support/controller_requests"
 require "aypex/testing_support/factories"
 require "aypex/testing_support/image_helpers"
+require "aypex/testing_support/i18n" if ENV["CHECK_TRANSLATIONS"]
 require "aypex/testing_support/locale_helpers"
 require "aypex/testing_support/order_walkthrough"
 require "aypex/testing_support/url_helpers"
