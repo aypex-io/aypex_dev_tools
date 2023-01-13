@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "aypex_core", github: "aypex-io/aypex"
+gem "aypex", github: "aypex-io/aypex"
 
 group :development do
   gem "rubocop"

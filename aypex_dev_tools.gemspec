@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.requirements << "none"
 
   s.add_dependency "appraisal"
-  s.add_dependency "aypex_core"
+  s.add_dependency "aypex"
   s.add_dependency "capybara"
   s.add_dependency "capybara-screenshot"
   s.add_dependency "database_cleaner"

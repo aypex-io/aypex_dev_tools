@@ -1,16 +1,16 @@
 # Required testing support from aypex_core
-require "aypex/testing_support/authorization_helpers"
-require "aypex/testing_support/caching"
-require "aypex/testing_support/controller_requests"
-require "aypex/testing_support/factories"
-require "aypex/testing_support/image_helpers"
-require "aypex/testing_support/i18n" if ENV["CHECK_TRANSLATIONS"]
-require "aypex/testing_support/locale_helpers"
-require "aypex/testing_support/order_walkthrough"
-require "aypex/testing_support/url_helpers"
-require "aypex/testing_support/capybara_config"
+require "testing_support/authorization_helpers"
+require "testing_support/caching"
+require "testing_support/controller_requests"
+require "testing_support/factories"
+require "testing_support/image_helpers"
+require "testing_support/i18n" if ENV["CHECK_TRANSLATIONS"]
+require "testing_support/locale_helpers"
+require "testing_support/order_walkthrough"
+require "testing_support/url_helpers"
+require "testing_support/capybara_config"
 
-require "aypex/core/controller_helpers/strong_parameters"
+require "aypex/controller_helpers/strong_parameters"
 
 # API v2 helpers
 if defined?(Aypex::Api)
@@ -39,7 +39,7 @@ RSpec.configure do |config|
   config.include Aypex::TestingSupport::ImageHelpers
   config.include Aypex::TestingSupport::LocaleHelpers
 
-  config.include Aypex::Core::ControllerHelpers::StrongParameters, type: :controller
+  config.include Aypex::ControllerHelpers::StrongParameters, type: :controller
 
   if defined?(Aypex::Api)
     config.include JSONAPI::RSpec, type: :request # required for API v2 request specs
